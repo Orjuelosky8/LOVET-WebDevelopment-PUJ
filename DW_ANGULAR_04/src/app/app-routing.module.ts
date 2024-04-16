@@ -6,6 +6,7 @@ import { StudentDetailComponent } from './student/student-detail/student-detail.
 import { ErrorPageComponent } from './error/error-page/error-page.component';
 import { ListaClientesComponent } from './crud-clientes/lista-clientes/lista-clientes.component';
 import { ListaMascotasComponent } from './crud-mascotas/lista-mascotas/lista-mascotas.component';
+// import { CrearClienteComponent } from './crud-clientes/crear-cliente/crear-cliente.component';
 
 const routes: Routes = [
   { path: 'home', component: StudentTableComponent },

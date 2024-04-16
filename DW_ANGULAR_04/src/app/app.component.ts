@@ -7,8 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   //modelo y controlador
-
-  title = 'Campus Virtual PUJ';
-
   userType='admin'
 }

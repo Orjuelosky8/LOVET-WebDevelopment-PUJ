@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FooterComponent } from './home/footer/footer.component';
 import { StudentTableComponent } from './student/student-table/student-table.component';
 import { StudentDetailComponent } from './student/student-detail/student-detail.component';
 import { StudentFormComponent } from './student/student-form/student-form.component';
@@ -28,7 +29,8 @@ import { CommonModule } from '@angular/common';
     EmoticonPipe,
     AdminPageComponent,
     ErrorPageComponent,
-    NavBarComponent
+    NavBarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
