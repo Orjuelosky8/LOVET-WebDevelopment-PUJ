@@ -1,0 +1,79 @@
+<app-nav-bar></app-nav-bar>
+<div layout:fragment="content" class="generalContent">
+
+
+    <div id="headerXSection">
+        <h1 class="sectionTitles" data-text="Mis Mascotas"></h1>
+        <h4>
+            ¡Bienvenid@ {{ cliente?.nombres }} {{ cliente?.apellidos }} ! <br> Estas son las mascotas que tienes
+            registradas:
+        </h4>
+    </div>
+
+    <!-- <table class="sectionTabla">
+        <thead>
+            <tr rowspan="4">
+                <th>Nombre</th>
+                <th>Raza</th>
+                <th>Edad</th>
+                <th>Imagen</th>
+                <th>Ver más</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="perro : ${mascotas}">
+                <td th:text="${perro.nombre}"></td>
+                <td th:text="${perro.raza}"></td>
+                <td th:text="${perro.edad}"></td>
+                <td> <img th:src="${perro.imagen}" width="100px" /></td>
+                <td><a th:href="@{/mascotas/find/{id}(id=${perro.id})}">Ver Info</a></td>
+                <td>
+                    <a th:href="@{/mascotas/update/{id}(id=${perro.id})}">Editar</a>
+                </td>
+                <td>
+                    <a th:href="@{/mascotas/delete/{id}(id=${perro.id})}">Eliminar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table> -->
+
+
+    <div style="display: flex;">
+        <div *ngIf="!loading; else loadingTemplate" style="width: 50%;">
+            <br>
+            <h2 style="padding-left: 20px;">Esta es tu Informacion Registrada en nuestro sistema:</h2>
+            <br>
+            <ul>
+                <li>Nombre: {{ cliente?.nombres }} {{ cliente?.apellidos }}</li>
+                <li>Usuario: {{ cliente?.userName }}</li>
+                <li>Correo: {{ cliente?.correoElectronico }}</li>
+                <li>Telef.: {{ cliente?.telefono }}</li>
+                <li>Telef. Aux.: {{ cliente?.telefonoAux }}</li>
+            </ul>
+        </div>
+    
+        <ng-template #loadingTemplate>
+            <p>Cargando detalles del cliente...</p>
+        </ng-template>
+    
+        <h3 style="padding-left: 100px;">Mascotas:</h3>
+        <div *ngIf="mascotas && mascotas.length" class="cardsPets">
+            <div *ngFor="let mascota of mascotas" class="cardPet">
+                <img [src]="mascota.imagen" width="100px" alt="Imagen de la mascota">
+                <h3>{{ mascota.nombre }}</h3>
+                <p><span>Raza: </span><span>{{ mascota.raza }}</span></p>
+                <p><span>Edad: </span><span>{{ mascota.edad }}</span></p>
+                <div id="interactionPetButtons" class="interactionPetButtons">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <a [routerLink]="['/mascota', mascota.id]">Más Información</a>
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<app-footer></app-footer>
