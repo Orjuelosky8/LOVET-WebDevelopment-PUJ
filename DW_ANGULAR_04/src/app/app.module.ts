@@ -16,7 +16,15 @@ import { NavBarComponent } from './home/nav-bar/nav-bar.component';
 import { ListaClientesComponent } from './crud-clientes/lista-clientes/lista-clientes.component';
 import { ListaMascotasComponent } from './crud-mascotas/lista-mascotas/lista-mascotas.component';
 import { CommonModule } from '@angular/common';
-
+// import { LoginComponent } from './authentication/login/login.component';
+import { LogupComponent } from './authentication/logup/logup.component';
+import { LandingPageComponent } from './home/landing-page/landing-page.component';
+import { DetallesMascotaComponent } from './crud-mascotas/detalles-mascota/detalles-mascota.component';
+import { CrearMascotaComponent } from './crud-mascotas/crear-mascota/crear-mascota.component';
+import { ServiciosComponent } from './home/servicios/servicios.component';
+import { PersonalComponent } from './home/personal/personal.component';
+import { CrearClienteComponent } from './crud-clientes/crear-cliente/crear-cliente.component';
+import { DetallesClienteComponent } from './crud-clientes/detalles-cliente/detalles-cliente.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +38,16 @@ import { CommonModule } from '@angular/common';
     AdminPageComponent,
     ErrorPageComponent,
     NavBarComponent,
-    FooterComponent
+    FooterComponent,
+    // LoginComponent,
+    LogupComponent,
+    LandingPageComponent,
+    DetallesMascotaComponent,
+    CrearMascotaComponent,
+    ServiciosComponent,
+    PersonalComponent,
+    CrearClienteComponent,
+    DetallesClienteComponent
   ],
   imports: [
     BrowserModule,

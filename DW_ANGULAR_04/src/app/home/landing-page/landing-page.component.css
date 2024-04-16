@@ -1,6 +1,6 @@
 #mainMoment{
     overflow: scroll;  
-    background-image: url(./../../../../assets/media/imgs/LandinPageMainImg.png);
+    /* background-image: url(./../../../../assets/media/imgs/LandinPageMainImg.png); */
     background-repeat: no-repeat;
     background-size: 100%;
 }
