@@ -13,6 +13,7 @@ import { ErrorPageComponent } from './error/error-page/error-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavBarComponent } from './home/nav-bar/nav-bar.component';
 import { ListaClientesComponent } from './crud-clientes/lista-clientes/lista-clientes.component';
+import { ListaMascotasComponent } from './crud-mascotas/lista-mascotas/lista-mascotas.component';
 import { CommonModule } from '@angular/common';
 
 
@@ -23,6 +24,7 @@ import { CommonModule } from '@angular/common';
     StudentDetailComponent,
     StudentFormComponent,
     ListaClientesComponent,
+    ListaMascotasComponent,
     EmoticonPipe,
     AdminPageComponent,
     ErrorPageComponent,
